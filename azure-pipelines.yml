@@ -30,7 +30,7 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Pipeline.Workspace)/s/dist'
+    targetPath: '$(Pipeline.Workspace)/s/sdk/aks/azure-mgmt-devspaces/dist'
     artifact: 'python-build-outputs'
     publishLocation: 'pipeline'
   displayName: 'Publish Build Artifacts'
