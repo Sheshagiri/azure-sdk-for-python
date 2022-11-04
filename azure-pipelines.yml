@@ -1,4 +1,5 @@
 # Python package
+
 # Create and test a Python package on multiple Python versions.
 # Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
@@ -7,20 +8,23 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
-strategy:
-  matrix:
-    Python37:
-      python.version: '3.7'
+  vmImage: windows-latest
 
 steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.6'
+  displayName: 'Use Python 3.6'
+
 - script: |
+    cd $(Pipeline.Workspace)/sdk/aks/azure-mgmt-devspaces
     python -m pip install --upgrade pip
     pip install setuptools
     py -m pip install --upgrade build
   displayName: 'Install dependencies'
 
 - script: |
+    cd $(Pipeline.Workspace)/sdk/aks/azure-mgmt-devspaces
     py -m build
   displayName: 'Python Build'
 
