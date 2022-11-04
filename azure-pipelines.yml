@@ -20,12 +20,12 @@ steps:
     cd $(Pipeline.Workspace)/s/sdk/aks/azure-mgmt-devspaces
     python -m pip install --upgrade pip
     pip install setuptools
-    py -m pip install --upgrade build
+    python -m pip install --upgrade build
   displayName: 'Install dependencies'
 
 - script: |
-    cd $(Pipeline.Workspace)/sdk/aks/azure-mgmt-devspaces
-    py -m build
+    cd $(Pipeline.Workspace)/s/sdk/aks/azure-mgmt-devspaces
+    python -m build
   displayName: 'Python Build'
 
 - task: PublishPipelineArtifact@1
