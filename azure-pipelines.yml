@@ -17,8 +17,7 @@ steps:
   displayName: 'Use Python 3.6'
 
 - script: |
-    pwd; ls -ltr
-    cd $(Pipeline.Workspace)/sdk/aks/azure-mgmt-devspaces
+    cd $(Pipeline.Workspace)/s/sdk/aks/azure-mgmt-devspaces
     python -m pip install --upgrade pip
     pip install setuptools
     py -m pip install --upgrade build
