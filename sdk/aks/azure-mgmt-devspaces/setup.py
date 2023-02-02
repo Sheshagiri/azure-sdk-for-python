@@ -12,7 +12,7 @@ from io import open
 from setuptools import find_packages, setup
 
 # Change the PACKAGE_NAME only to change folder and different name
-PACKAGE_NAME = "azure-mgmt-devspaces"
+PACKAGE_NAME = "azure-mgmt-devspaces-test"
 PACKAGE_PPRINT_NAME = "Devspaces Management"
 
 # a-b-c => a/b/c
