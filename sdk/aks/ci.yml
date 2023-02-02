@@ -28,6 +28,6 @@ extends:
   parameters:
     ServiceDirectory: aks
     Artifacts:
-    - name: azure-mgmt-devspaces
+    - name: azure-mgmt-devspaces-test
       safeName: azuremgmtdevspaces
 
